@@ -1,0 +1,110 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, sans-serif;
+}
+
+body {
+background: #000;
+color: #aaa;
+}
+
+/* EMAIL OVERLAY */
+.email-overlay {
+position: fixed;
+inset: 0;
+background: rgba(0,0,0,0.95);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+z-index: 10;
+}
+
+.email-overlay h2 {
+color: #fff;
+margin-bottom: 10px;
+}
+
+.email-overlay input,
+.signup input {
+padding: 12px;
+width: 250px;
+margin: 10px 0;
+border: none;
+}
+
+.email-overlay button,
+.signup button {
+padding: 12px 30px;
+background: #ff4fd8;
+border: none;
+color: #000;
+cursor: pointer;
+font-weight: bold;
+}
+
+section {
+padding: 100px 20px;
+text-align: center;
+}
+
+.hero h1 {
+font-size: 4rem;
+color: #777;
+}
+
+.hero span {
+color: #ff4fd8;
+}
+
+.merch-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 20px;
+margin-top: 40px;
+}
+
+.card {
+border: 1px solid #333;
+padding: 60px;
+transition: transform 0.3s, border 0.3s;
+}
+
+.card:hover {
+transform: scale(1.05);
+border-color: #ff4fd8;
+}
+
+/* MOTION VISUAL */
+.moving-line {
+width: 200px;
+height: 2px;
+background: #ff4fd8;
+margin: 40px auto;
+animation: move 2s infinite alternate;
+}
+
+@keyframes move {
+from { transform: translateX(-50px); }
+to { transform: translateX(50px); }
+}
+
+/* FADE IN */
+.fade-in {
+opacity: 0;
+transform: translateY(40px);
+transition: 1s;
+}
+
+.fade-in.show {
+opacity: 1;
+transform: translateY(0);
+}
+
+footer {
+padding: 40px;
+text-align: center;
+font-size: 0.9rem;
+}
